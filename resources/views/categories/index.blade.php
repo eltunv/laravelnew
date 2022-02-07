@@ -28,7 +28,7 @@
                     <tbody>
                     @foreach($categories as $item)
                         <tr class="border-1 hover">
-                            <td></td>
+                            <td>{{ $item->id }}</td>
                             <td class="border-1 act">{{ $item->name }}</td>
                             <td class="act border-1">{{ $item->status }}</td>
                             <td class="right d-flex">

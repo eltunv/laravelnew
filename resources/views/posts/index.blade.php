@@ -19,6 +19,7 @@
                 <table class="table table-bordered">
                     <thead>
                     <tr>
+                        <th>ID</th>
                         <th class="col-3">Name</th>
                         <th class="col-3">Meta Title</th>
                         <th class="col-2">Meta Description</th>
@@ -30,6 +31,7 @@
                     <tbody>
                     @foreach($posts as $item)
                         <tr class="border-1 hover">
+                            <td class="border-1 act">{{ $item->id }}</td>
                             <td class="border-1 act">{{ $item->name }}</td>
                             <td class="act border-1">{{ $item->meta_title }}</td>
                             <td class="act border-1">{{ $item->meta_description }}</td>

@@ -19,15 +19,17 @@
                 <table class="table table-bordered">
                     <thead>
                     <tr>
+                        <th class="col-1">ID</th>
                         <th class="col-3">Name</th>
                         <th class="col-3">Link</th>
-                        <th class="col-3">Api Token</th>
-                        <th class="col-2">Is Active</th>
+                        <th class="col-4">Api Token</th>
+                        <th class="col-1">Is Active</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($websites as $item)
                     <tr>
+                        <td>{{ $item->id }}</td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->link }}</td>
                         <td>{{ $item->api_token }}</td>
