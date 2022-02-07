@@ -5,17 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Language extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'name',
-        'meta_title',
-        'meta_description',
-        'meta_keywords',
-        'published',
-        'category_id',
+        'code',
         'language_id'
     ];
 }

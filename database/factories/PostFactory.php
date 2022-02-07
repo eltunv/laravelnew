@@ -20,6 +20,7 @@ class PostFactory extends Factory
             'meta_keywords' => $this->faker->text(),
             'published' => $this->faker->dateTime(),
             'category_id' => $this->faker->numberBetween(),
+            'language_id' => $this->faker->numberBetween(1, 3),
         ];
     }
 }

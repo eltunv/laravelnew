@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FreelancerController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\JobsController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebsiteController;
@@ -33,3 +34,5 @@ Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name(
 Route::resource('posts', PostController::class);
 
 Route::resource('websites', WebsiteController::class);
+
+Route::resource('languages', LanguageController::class);

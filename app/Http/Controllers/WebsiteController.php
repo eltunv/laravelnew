@@ -24,12 +24,10 @@ class WebsiteController extends Controller
         return redirect()->route('websites.index');
     }
 
-
     public function create()
     {
         return view('websites.create');
     }
-
 
     public function update(Website $website, Request $request)
     {

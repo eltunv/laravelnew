@@ -19,6 +19,7 @@ class CreateWebsitesTable extends Migration
             $table->string('link');
             $table->string('api_token');
             $table->boolean('status');
+            $table->unsignedBigInteger('language_id');
             $table->timestamps();
         });
     }

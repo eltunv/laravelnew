@@ -13,6 +13,7 @@ class Website extends Model
         'name',
         'link',
         'api_token',
-        'status'
+        'status',
+        'language_id'
     ];
 }

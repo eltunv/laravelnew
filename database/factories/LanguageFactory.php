@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CategoryFactory extends Factory
+class LanguageFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,8 +15,7 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'status' => $this->faker->boolean(),
-            'language_id' => $this->faker->numberBetween(1, 3),
+            'code' => $this->faker->countryCode()
         ];
     }
 }

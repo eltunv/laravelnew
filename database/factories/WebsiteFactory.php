@@ -18,6 +18,7 @@ class WebsiteFactory extends Factory
             'link' => $this->faker->url(),
             'api_token' => $this->faker->password(20),
             'status' => $this->faker->boolean(),
+            'language_id' => $this->faker->numberBetween(1, 3),
         ];
     }
 }

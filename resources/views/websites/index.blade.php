@@ -24,6 +24,7 @@
                         <th class="col-3">Link</th>
                         <th class="col-4">Api Token</th>
                         <th class="col-1">Is Active</th>
+                        <th class="col-1">Language</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -34,6 +35,7 @@
                         <td>{{ $item->link }}</td>
                         <td>{{ $item->api_token }}</td>
                         <td>{{ $item->status }}</td>
+                        <td>{{ $item->language_id }}</td>
                         <td class="d-flex">
                             <a href="{{ route('websites.edit', ['website' => $item->id]) }}" class="mx-2 btn btn-primary edit">
                                 Edit

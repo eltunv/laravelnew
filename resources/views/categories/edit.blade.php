@@ -26,6 +26,9 @@
                     <label for="status" class="my-4 w-100"> Status
                         <input type="text" class="form-control" id="status" name="status" value="{{ $categories->status }}">
                     </label>
+                    <label for="language_id" class="my-4 w-100"> Language
+                        <input type="text" class="form-control" id="language_id" name="language_id" value="{{ $categories->language_id }}">
+                    </label>
                 </form>
             </div>
             <div class="form-group">

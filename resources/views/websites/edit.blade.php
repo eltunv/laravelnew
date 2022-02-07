@@ -32,6 +32,9 @@
                     <label for="status" class="w-100"> Status
                         <input type="text" class="form-control" id="status" name="status" style="outline: 0;" value="{{ $websites->status }}">
                     </label>
+                    <label for="language_id" class="w-100"> Language_id
+                        <input type="text" class="form-control" id="language_id" name="language_id" style="outline: 0;" value="{{ $websites->language_id }}">
+                    </label>
                 </form>
             </div>
         </div>

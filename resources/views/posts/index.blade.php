@@ -26,6 +26,7 @@
                         <th class="col-2">Meta KeyWords</th>
                         <th class="col-2">Published</th>
                         <th class="col-2">Category</th>
+                        <th class="col-1">Language</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -38,6 +39,7 @@
                             <td class="act border-1">{{ $item->meta_keywords }}</td>
                             <td class="act border-1">{{ $item->published }}</td>
                             <td class="act border-1">{{ $item->category_id }}</td>
+                            <td class="act border-1">{{ $item->language_id }}</td>
                             <td class="right d-flex">
                                 <a href="{{ route('posts.edit', ['post' => $item->id]) }}" class="mx-2 btn btn-primary edit">
                                     Edit

@@ -38,6 +38,9 @@
                     <label for="category_id" class="my-4 w-100"> Category Id
                         <input type="text" class="form-control" id="category_id" name="category_id" value="{{ $posts->category_id }}">
                     </label>
+                    <label for="language_id" class="my-4 w-100"> Language Id
+                        <input type="text" class="form-control" id="language_id" name="language_id" value="{{ $posts->language_id }}">
+                    </label>
                 </form>
             </div>
         </div>

@@ -29,6 +29,7 @@
             <li class="nav-item"><a href="{{ route('categories.index') }}" class="nav-link">Categories</a></li>
             <li class="nav-item"><a href="{{ route('posts.index') }}" class="nav-link">Posts</a></li>
             <li class="nav-item"><a href="{{ route('websites.index') }}" class="nav-link">Websites</a></li>
+            <li class="nav-item"><a href="{{ route('languages.index') }}" class="nav-link">Languages</a></li>
         </ul>
     </div>
 </header>
