@@ -14,6 +14,15 @@ class LanguageSeeder extends Seeder
      */
     public function run()
     {
-        Language::factory()->count(2)->create();
+        $languages = [
+            ['name' => 'Английский', 'code' => 'en'],
+            ['name' => 'Украинский', 'code' => 'uk']
+        ];
+        foreach ($languages as $language) {
+            Language::factory()->create([
+                'name' => $language['name'],
+                'code' => $language['code']
+            ]);
+        }
     }
 }

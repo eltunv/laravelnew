@@ -23,7 +23,7 @@
                         <th class="col-3">Имя</th>
                         <th class="col-3">Ссылка</th>
                         <th class="col-4">Токен</th>
-                        <th class="col-1">Активный</th>
+                        <th class="col-1">Статус</th>
                         <th class="col-1">Язык</th>
                     </tr>
                     </thead>

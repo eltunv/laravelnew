@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
+use App\Models\Language;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -28,7 +29,11 @@ class CategoryController extends Controller
 
     public function create()
     {
-        return view('categories.create');
+        $languages = Language::all();
+
+        return view('categories.create', [
+            'languages' => $languages
+        ]);
     }
 
 
@@ -43,10 +48,12 @@ class CategoryController extends Controller
 
     public function edit($id)
     {
+        $languages = Language::all();
         $category = Category::find($id);
 
         return view('categories.edit', [
-            'categories' => $category
+            'categories' => $category,
+            'languages' => $languages
         ]);
     }
 

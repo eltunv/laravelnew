@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
 use App\Models\Category;
+use App\Models\Language;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class PostController extends Controller
 
     public function store(PostRequest $postRequest)
     {
-        Post::create($request->all());
+        Post::create($postRequest->all());
 
         return redirect()->route('posts.index');
     }
@@ -29,7 +30,11 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('posts.create');
+        $languages = Language::all();
+
+        return view('posts.create', [
+            'languages' => $languages
+        ]);
     }
 
 
@@ -43,9 +48,11 @@ class PostController extends Controller
 
     public function edit(Post $post)
     {
+        $languages = Language::all();
 
         return view('posts.edit', [
-            'posts' => $post
+            'posts' => $post,
+            'languages' => $languages
         ]);
     }
 

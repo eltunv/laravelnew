@@ -54,7 +54,11 @@
                         @enderror
                     </label>
                     <label for="language_id" class="my-4 w-100"> Языки
-                        <input type="text" class="form-control" id="language_id" name="language_id">
+                        <select name="language_id" id="language_id" class="form-control">
+                            @foreach ($languages as $language)
+                                <option value="{{ $language->id }}">{{ $language->name }}</option>
+                            @endforeach
+                        </select>
                         @error('language_id')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror

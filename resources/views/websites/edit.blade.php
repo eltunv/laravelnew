@@ -39,13 +39,20 @@
                         @enderror
                     </label>
                     <label for="status" class="w-100"> Статус
-                        <input type="text" class="form-control" id="status" name="status" style="outline: 0;" value="{{ $websites->status }}">
+                        <select name="status" id="status" class="form-control">
+                            <option value="0">Выключить</option>
+                            <option value="1">Включить</option>
+                        </select>
                         @error('status')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </label>
                     <label for="language_id" class="w-100"> Языки
-                        <input type="text" class="form-control" id="language_id" name="language_id" style="outline: 0;" value="{{ $websites->language_id }}">
+                        <select name="language_id" id="language_id" class="form-control">
+                            @foreach ($languages as $language)
+                                <option value="{{ $language->id }}">{{ $language->name }}</option>
+                            @endforeach
+                        </select>
                         @error('language_id')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror

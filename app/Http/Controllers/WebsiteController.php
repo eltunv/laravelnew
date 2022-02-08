@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\WebsiteRequest;
+use App\Models\Language;
 use App\Models\Website;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,11 @@ class WebsiteController extends Controller
 
     public function create()
     {
-        return view('websites.create');
+        $languages = Language::all();
+
+        return view('websites.create', [
+            'languages' => $languages
+        ]);
     }
 
     public function update(Website $website, WebsiteRequest $websiteRequest)
@@ -40,8 +45,11 @@ class WebsiteController extends Controller
 
     public function edit(Website $website)
     {
+        $languages = Language::all();
+
         return view('websites.edit', [
-            'websites' => $website
+            'websites' => $website,
+            'languages' => $languages
         ]);
     }
 
