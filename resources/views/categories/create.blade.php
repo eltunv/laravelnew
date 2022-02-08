@@ -31,7 +31,7 @@
                     </label>
                     <label for="language_id" class="my-4 w-100"> Language
                         <input type="text" class="form-control" id="language_id" name="language_id">
-                        @error('language')
+                        @error('language_id')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </label>
