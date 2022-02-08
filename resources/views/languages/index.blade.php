@@ -8,20 +8,20 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb">
-                    <div class="breadcrumb-item">Home</div>
-                    <div class="breadcrumb-item active">Language</div>
+                    <div class="breadcrumb-item">Главная</div>
+                    <div class="breadcrumb-item active">Язык</div>
                 </div>
             </div>
             <div class="col-12">
-                <a href="{{ route('languages.create') }}" class="btn btn-primary float-end">Add</a>
+                <a href="{{ route('languages.create') }}" class="btn btn-primary float-end">Создать</a>
             </div>
             <div class="col-12 my-2">
                 <table class="table table-bordered">
                     <thead>
                     <tr>
                         <th class="col-1">ID</th>
-                        <th class="col-6">Name</th>
-                        <th class="col-5">Code</th>
+                        <th class="col-6">Имя</th>
+                        <th class="col-5">Код</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -32,7 +32,7 @@
                             <td class="act border-1">{{ $item->code }}</td>
                             <td class="right d-flex">
                                 <a href="{{ route('languages.edit', ['language' => $item->id]) }}" class="mx-2 btn btn-primary edit">
-                                    Edit
+                                    Редактировать
                                 </a>
                                 <form action="{{ route('languages.destroy', ['language' => $item->id]) }}" method="POST">
                                     @csrf

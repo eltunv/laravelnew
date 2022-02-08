@@ -8,8 +8,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb">
-                    <div class="breadcrumb-item">Home</div>
-                    <div class="breadcrumb-item active">Websites</div>
+                    <div class="breadcrumb-item">Главная</div>
+                    <div class="breadcrumb-item active">Сайты</div>
                 </div>
             </div>
             <div class="col-12">
@@ -20,11 +20,11 @@
                     <thead>
                     <tr>
                         <th class="col-1">ID</th>
-                        <th class="col-3">Name</th>
-                        <th class="col-3">Link</th>
-                        <th class="col-4">Api Token</th>
-                        <th class="col-1">Is Active</th>
-                        <th class="col-1">Language</th>
+                        <th class="col-3">Имя</th>
+                        <th class="col-3">Ссылка</th>
+                        <th class="col-4">Токен</th>
+                        <th class="col-1">Активный</th>
+                        <th class="col-1">Язык</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -38,7 +38,7 @@
                         <td>{{ $item->language_id }}</td>
                         <td class="d-flex">
                             <a href="{{ route('websites.edit', ['website' => $item->id]) }}" class="mx-2 btn btn-primary edit">
-                                Edit
+                                Редактировать
                             </a>
                             <form action="{{ route('websites.destroy', ['website' => $item->id]) }}" method="POST">
                                 @csrf

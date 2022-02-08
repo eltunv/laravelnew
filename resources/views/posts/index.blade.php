@@ -8,8 +8,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb">
-                    <div class="breadcrumb-item">Home</div>
-                    <div class="breadcrumb-item active">Posts</div>
+                    <div class="breadcrumb-item">Главная</div>
+                    <div class="breadcrumb-item active">Посты</div>
                 </div>
             </div>
             <div class="col-12">
@@ -20,13 +20,13 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th class="col-3">Name</th>
-                        <th class="col-3">Meta Title</th>
-                        <th class="col-2">Meta Description</th>
-                        <th class="col-2">Meta KeyWords</th>
-                        <th class="col-2">Published</th>
-                        <th class="col-2">Category</th>
-                        <th class="col-1">Language</th>
+                        <th class="col-3">Имя</th>
+                        <th class="col-3">Заголовок</th>
+                        <th class="col-2">Описания</th>
+                        <th class="col-2">Ключевое слово</th>
+                        <th class="col-2">Опубликовано</th>
+                        <th class="col-2">Категории</th>
+                        <th class="col-1">Языки</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -42,7 +42,7 @@
                             <td class="act border-1">{{ $item->language_id }}</td>
                             <td class="right d-flex">
                                 <a href="{{ route('posts.edit', ['post' => $item->id]) }}" class="mx-2 btn btn-primary edit">
-                                    Edit
+                                    Редактировать
                                 </a>
                                 <form action="{{ route('posts.destroy', ['post' => $item->id]) }}" method="POST">
                                     @csrf

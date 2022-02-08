@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\LanguageController;
+use App\Http\Controllers\Api\PostController;
+use App\Http\Controllers\Api\WebsiteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('categories', CategoryController::class);
+Route::apiResource('posts', PostController::class);
+Route::apiResource('websites', WebsiteController::class);
+Route::apiResource('languages', LanguageController::class);

@@ -8,22 +8,22 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb">
-                    <div class="breadcrumb-item">Home</div>
-                    <div class="breadcrumb-item active">Category</div>
+                    <div class="breadcrumb-item">Главное</div>
+                    <div class="breadcrumb-item active">Категории</div>
                 </div>
             </div>
             <div class="col-12">
-                <a href="{{ route('categories.create') }}" class="btn btn-primary float-end">Add</a>
+                <a href="{{ route('categories.create') }}" class="btn btn-primary float-end">Добавить</a>
             </div>
             <div class="col-12 my-2">
                 <table class="table table-bordered">
                     <thead>
                     <tr>
                         <th class="col-1">ID</th>
-                        <th class="col-9">Name</th>
-                        <th class="col-1">Status</th>
-                        <th class="col-1">Language</th>
-                        <th class="col-1">Actions</th>
+                        <th class="col-9">Имя</th>
+                        <th class="col-1">Статус</th>
+                        <th class="col-1">Язык</th>
+                        <th class="col-1">Действия</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -35,7 +35,7 @@
                             <td class="act border-1">{{ $item->language_id }}</td>
                             <td class="right d-flex">
                                 <a href="{{ route('categories.edit', ['id' => $item->id]) }}" class="mx-2 btn btn-primary edit">
-                                    Edit
+                                    Редактировать
                                 </a>
                                 <form action="{{ route('categories.destroy', ['id' => $item->id]) }}" method="POST">
                                     @csrf

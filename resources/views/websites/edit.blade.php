@@ -8,9 +8,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb">
-                    <div class="breadcrumb-item">Home</div>
-                    <div class="breadcrumb-item">Websites</div>
-                    <div class="breadcrumb-item active">Edit</div>
+                    <div class="breadcrumb-item">Главная</div>
+                    <div class="breadcrumb-item">Сайты</div>
+                    <div class="breadcrumb-item active">Редактировать</div>
                 </div>
             </div>
             <div class="col-12 my-2">
@@ -18,33 +18,33 @@
                     @csrf
                     @method('PUT')
                     <button class="btn btn-primary my-3 make mx-1 float-end" type="submit">
-                        Save
+                        Сохранить
                     </button>
-                    <label for="name" class="w-100"> Name
+                    <label for="name" class="w-100"> Имя
                         <input type="text" class="form-control" id="name" name="name" style="outline: 0;" value="{{ $websites->name }}">
                         @error('name')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </label>
-                    <label for="link" class="w-100"> Link
+                    <label for="link" class="w-100"> Ссылка
                         <input type="text" class="form-control" id="link" name="link" style="outline: 0;" value="{{ $websites->link }}">
                         @error('link')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </label>
-                    <label for="api_token" class="w-100"> Api Token
+                    <label for="api_token" class="w-100"> Токен
                         <input type="text" class="form-control" id="api_token" name="api_token" style="outline: 0;" value="{{ $websites->api_token }}">
                         @error('api_token')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </label>
-                    <label for="status" class="w-100"> Status
+                    <label for="status" class="w-100"> Статус
                         <input type="text" class="form-control" id="status" name="status" style="outline: 0;" value="{{ $websites->status }}">
                         @error('status')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </label>
-                    <label for="language_id" class="w-100"> Language_id
+                    <label for="language_id" class="w-100"> Языки
                         <input type="text" class="form-control" id="language_id" name="language_id" style="outline: 0;" value="{{ $websites->language_id }}">
                         @error('language_id')
                         <small class="text-danger">{{ $message }}</small>

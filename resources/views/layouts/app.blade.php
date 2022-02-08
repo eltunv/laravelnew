@@ -23,7 +23,7 @@
 <header class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
         <a href="{{ route('index') }}" class="navbar-brand">
-            Modamu
+            Модаму
         </a>
         <ul class="nav navbar-nav float-end">
             <li class="nav-item"><a href="{{ route('categories.index') }}" class="nav-link">Categories</a></li>
