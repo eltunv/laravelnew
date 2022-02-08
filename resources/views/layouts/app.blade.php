@@ -23,13 +23,13 @@
 <header class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
         <a href="{{ route('index') }}" class="navbar-brand">
-            Модаму
+            Modamu
         </a>
         <ul class="nav navbar-nav float-end">
-            <li class="nav-item"><a href="{{ route('categories.index') }}" class="nav-link">Categories</a></li>
-            <li class="nav-item"><a href="{{ route('posts.index') }}" class="nav-link">Posts</a></li>
-            <li class="nav-item"><a href="{{ route('websites.index') }}" class="nav-link">Websites</a></li>
-            <li class="nav-item"><a href="{{ route('languages.index') }}" class="nav-link">Languages</a></li>
+            <li class="nav-item"><a href="{{ route('categories.index') }}" class="nav-link">Категории</a></li>
+            <li class="nav-item"><a href="{{ route('posts.index') }}" class="nav-link">Посты</a></li>
+            <li class="nav-item"><a href="{{ route('websites.index') }}" class="nav-link">Веб-Сайты</a></li>
+            <li class="nav-item"><a href="{{ route('languages.index') }}" class="nav-link">Языки</a></li>
         </ul>
     </div>
 </header>
