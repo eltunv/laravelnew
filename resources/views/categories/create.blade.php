@@ -19,12 +19,21 @@
                     <button type="submit" class="btn btn-primary my-3 make mx-1 float-end">Add</button>
                     <label for="name" class="w-100"> Name
                         <input type="text" class="form-control" id="name" name="name" style="outline: 0;">
+                        @error('name')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                     <label for="status" class="my-4 w-100"> Status
                         <input type="text" class="form-control" id="status" name="status">
+                        @error('status')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                     <label for="language_id" class="my-4 w-100"> Language
                         <input type="text" class="form-control" id="language_id" name="language_id">
+                        @error('language')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                 </form>
             </div>

@@ -22,12 +22,21 @@
                     </button>
                     <label for="name" class="w-100"> Name
                         <input type="text" class="form-control" id="firstName" name="name" style="outline: 0;" value="{{ $categories->name }}">
+                        @error('name')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                     <label for="status" class="my-4 w-100"> Status
                         <input type="text" class="form-control" id="status" name="status" value="{{ $categories->status }}">
+                        @error('status')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                     <label for="language_id" class="my-4 w-100"> Language
                         <input type="text" class="form-control" id="language_id" name="language_id" value="{{ $categories->language_id }}">
+                        @error('language_id')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                 </form>
             </div>

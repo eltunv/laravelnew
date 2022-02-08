@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -17,9 +18,9 @@ class CategoryController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(CategoryRequest $categoryRequest)
     {
-        Category::create($request->all());
+        Category::create($categoryRequest->all());
 
         return redirect()->route('categories.index');
     }
@@ -31,10 +32,10 @@ class CategoryController extends Controller
     }
 
 
-    public function update($id, Request $request)
+    public function update($id, CategoryRequest $categoryRequest)
     {
         $category = Category::find($id);
-        $category->update($request->all());
+        $category->update($categoryRequest->all());
 
         return redirect()->route('categories.index');
     }

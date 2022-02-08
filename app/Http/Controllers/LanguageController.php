@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CategoryRequest;
+use App\Http\Requests\LanguageRequest;
 use App\Models\Language;
 use Illuminate\Http\Request;
 
@@ -17,9 +19,9 @@ class LanguageController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(LanguageRequest $languageRequest)
     {
-        Language::create($request->all());
+        Language::create($languageRequest->all());
 
         return redirect()->route('languages.index');
     }
@@ -31,9 +33,9 @@ class LanguageController extends Controller
     }
 
 
-    public function update(Language $language, Request $request)
+    public function update(Language $language,  LanguageRequest $languageRequest)
     {
-        $language->update($request->all());
+        $language->update($languageRequest->all());
 
         return redirect()->route('languages.index');
     }
@@ -42,7 +44,7 @@ class LanguageController extends Controller
     public function edit(Language $language)
     {
         return view('languages.edit', [
-            'languages' => $language
+            'language' => $language
         ]);
     }
 

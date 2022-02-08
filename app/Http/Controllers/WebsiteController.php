@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\WebsiteRequest;
 use App\Models\Website;
 use Illuminate\Http\Request;
 
@@ -17,9 +18,9 @@ class WebsiteController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(WebsiteRequest $websiteRequest)
     {
-        Website::create($request->all());
+        Website::create($websiteRequest->all());
 
         return redirect()->route('websites.index');
     }
@@ -29,9 +30,9 @@ class WebsiteController extends Controller
         return view('websites.create');
     }
 
-    public function update(Website $website, Request $request)
+    public function update(Website $website, WebsiteRequest $websiteRequest)
     {
-        $website->update($request->all());
+        $website->update($websiteRequest->all());
 
         return redirect()->route('websites.index');
     }

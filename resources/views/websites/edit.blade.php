@@ -22,18 +22,33 @@
                     </button>
                     <label for="name" class="w-100"> Name
                         <input type="text" class="form-control" id="name" name="name" style="outline: 0;" value="{{ $websites->name }}">
+                        @error('name')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                     <label for="link" class="w-100"> Link
                         <input type="text" class="form-control" id="link" name="link" style="outline: 0;" value="{{ $websites->link }}">
+                        @error('link')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                     <label for="api_token" class="w-100"> Api Token
                         <input type="text" class="form-control" id="api_token" name="api_token" style="outline: 0;" value="{{ $websites->api_token }}">
+                        @error('api_token')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                     <label for="status" class="w-100"> Status
                         <input type="text" class="form-control" id="status" name="status" style="outline: 0;" value="{{ $websites->status }}">
+                        @error('status')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                     <label for="language_id" class="w-100"> Language_id
                         <input type="text" class="form-control" id="language_id" name="language_id" style="outline: 0;" value="{{ $websites->language_id }}">
+                        @error('language_id')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                 </form>
             </div>

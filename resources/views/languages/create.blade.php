@@ -19,9 +19,15 @@
                     <button type="submit" class="btn btn-primary my-3 make mx-1 float-end">Add</button>
                     <label for="name" class="w-100"> Name
                         <input type="text" class="form-control" id="name" name="name" style="outline: 0;">
+                        @error('name')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                     <label for="code" class="my-4 w-100"> Code
                         <input type="text" class="form-control" id="code" name="code">
+                        @error('code')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </label>
                 </form>
             </div>
