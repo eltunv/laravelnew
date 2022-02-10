@@ -17,9 +17,9 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('meta_title');
-            $table->text('meta_description');
-            $table->text('meta_keywords');
-            $table->dateTime('published');
+            $table->text('meta_description')->nullable();
+            $table->text('meta_keywords')->nullable();
+            $table->dateTime('published')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('language_id');
             $table->timestamps();

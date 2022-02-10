@@ -26,9 +26,6 @@ class PostRequest extends FormRequest
         return [
             'name' => 'required',
             'meta_title' => 'required',
-            'meta_description' => 'required',
-            'meta_keywords' => 'required',
-            'published' => 'required',
             'category_id' => 'required',
             'language_id' => 'required',
         ];
