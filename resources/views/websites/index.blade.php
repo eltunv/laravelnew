@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('meta_title') Users List @endsection
+@section('meta_title') Posts List @endsection
 
 @section('content')
 
@@ -50,6 +50,7 @@
                     @endforeach
                     </tbody>
                 </table>
+                {{ $websites->links() }}
             </div>
         </div>
     </div>

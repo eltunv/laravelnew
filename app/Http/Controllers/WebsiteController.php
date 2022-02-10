@@ -11,7 +11,7 @@ class WebsiteController extends Controller
 {
     public function index()
     {
-        $websites = Website::all();
+        $websites = Website::paginate(1);
 
         return view('websites.index', [
             'websites' => $websites
