@@ -22,7 +22,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
-
 Route::resource('categories', CategoryController::class);
 Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
 Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
@@ -36,3 +35,4 @@ Route::resource('posts', PostController::class);
 Route::resource('websites', WebsiteController::class);
 
 Route::resource('languages', LanguageController::class);
+
